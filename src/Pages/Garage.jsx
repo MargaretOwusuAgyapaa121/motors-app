@@ -1,9 +1,9 @@
-import Motors from "../Components/Cars";
+import Garage from "../Components/Cars";
 
 export default  function LuxuryCars(){
     return(
         <>
-        <Motors/>
+        <Garage/>
         </>
     )
 }

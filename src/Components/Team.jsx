@@ -1,47 +1,56 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import React from "react";
 
-const img2 = "/AP Luxury/img2.jpg";
-const teamImages = [img2, img2];
+import { FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
-export default function TeamSection() {
-    return (
-        <div className="container-fluid py-5">
-            <div className="container py-5">
-                <h1 className="display-4 text-uppercase text-center mb-5">Meet Our Team</h1>
-                <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 3000 }}
-                    breakpoints={{
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                    }}
-                >
-                    {teamImages.map((img, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="team-item text-center">
-                                <img className="img-fluid w-100" src={img} alt={`Team Member ${index + 1}`} />
-                                <div className="position-relative py-4">
-                                    <h4 className="text-uppercase">Full Name</h4>
-                                    <p className="m-0">Designation</p>
-                                    <div className="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                                        <a className="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i className="fab fa-twitter"></i></a>
-                                        <a className="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+const teamMembers = [
+  {
+    name: "George Atta Poku",
+    role: "Founder & CEO",
+    image: "/assets/AP luxury/ceo.png",
+    desc: "Visionary leader with a passion for luxury cars.",
+    instagram: "#",
+    twitter: "#",
+    whatsApp: "#",
+  },
+  {
+    name: "Emmanuel",
+    role: "Manager",
+    image: "/assets/AP luxury/manager.jpg",
+    desc: " making car dreams interactive.",
+    linkedin: "#",
+    twitter: "#",
+    whatsApp: "#",
+  },
+  {
+    name: "Cythia Carter",
+    role: "Secretary",
+    // image: "/assets/team/sophia.jpg",
+    desc: "Designs sleek interfaces that feel like driving a supercar.",
+    instagram: "#",
+    twitter: "#",
+    github: "#",
+  },
+];
+
+export default function Team() {
+  return (
+    <section className="team-section">
+      <h2 className="section-title">Meet Our Team</h2>
+      <div className="team-grid">
+        {teamMembers.map((member, index) => (
+          <div className="team-card" key={index}>
+            <img src={member.image} alt={member.name} className="team-img" />
+            <h3>{member.name}</h3>
+            <p className="role">{member.role}</p>
+            <p className="desc">{member.desc}</p>
+            <div className="social-icons">
+              <a href={member.instagram}><FaInstagram /></a>
+              <a href={member.twitter}><FaTwitter /></a>
+              <a href={member.github}><FaWhatsapp /></a>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

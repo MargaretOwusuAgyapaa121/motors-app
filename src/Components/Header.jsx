@@ -17,7 +17,7 @@ export default function Head() {
       >
         {/* First Carousel Item */}
         <div>
-          <img src="/assets/AP luxury/img/carousel-1.jpg" alt="Luxury Car for Sale" />
+          <img src="/assets/AP luxury/carousel-1.jpg" alt="Luxury Car for Sale" />
           <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <div className="p-3" style={{ maxWidth: "900px" }}>
               <h4 className="text-white text-uppercase mb-md-3">Buy A Car</h4>

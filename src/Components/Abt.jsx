@@ -21,8 +21,8 @@ export default function About() {
                                 <img className="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="assets/AP Luxury/img/banner-left.png" alt="" />
                                 <div className="text-right">
                                     <h3 className="text-uppercase text-light mb-3">Want to be a driver?</h3>
-                                    <p className="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                                    <Link className="btn btn-primary py-2 px-4" to="/driver">Start Now</Link>
+                                    <p className="mb-4">Let make it happen!</p>
+                                    <Link className="btn btn-primary py-2 px-4" to="/garage">Explore our Garage</Link>
                                 </div>
                             </div>
                         </div>
@@ -30,8 +30,8 @@ export default function About() {
                             <div className="px-5 bg-dark d-flex align-items-center justify-content-between" style={{ height: "350px" }}>
                                 <div className="text-left">
                                     <h3 className="text-uppercase text-light mb-3">Looking for a car?</h3>
-                                    <p className="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                                    <Link className="btn btn-primary py-2 px-4" to="/cars">Start Now</Link>
+                                    <p className="mb-4">Find the one that fits your style!</p>
+                                    <Link className="btn btn-primary py-2 px-4" to="/contact">contact Us</Link>
                                 </div>
                                 <img className="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="assets/AP Luxury/img/banner-right.png" alt="" />
                             </div>

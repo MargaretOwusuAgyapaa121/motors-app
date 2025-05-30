@@ -12,6 +12,13 @@
   font-size: 15px;
   color: white !important;
 }
+.sticky{
+  position: sticky;
+  top: -10px;
+  z-index: 1000; 
+  padding: 10px 20px;
+}
+
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
@@ -142,9 +149,82 @@ h6,
 }
 
 /* Responsive Navbar Padding */
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .navbar-dark .navbar-nav .nav-link {
     padding: 8px 10px !important;
     font-size: 14px;
   }
+} */
+
+
+ /* Base styles for mobile first */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        padding: 10px 15px !important;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(142, 219, 229, 0.1);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.page-header {
+    height: 400px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(28, 50, 36, 0.9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
+    background-attachment: fixed;
+}
+
+@media (max-width: 991.98px) {
+    .page-header {
+        height: 300px;
+    }
 }

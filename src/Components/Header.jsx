@@ -22,8 +22,8 @@ export default function Head() {
             <div className="p-3" style={{ maxWidth: "900px" }}>
               <h4 className="text-white text-uppercase mb-md-3">Buy A Car</h4>
               <h1 className="display-1 text-white mb-md-4">Best Cars Sales In Your Location</h1>
-              <Link to="#" className="btn btn-primary py-md-3 px-md-5 mt-2">
-                Reserve Now
+              <Link to="/garage" className="btn btn-primary py-md-3 px-md-5 mt-2">
+                Garage
               </Link>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function Head() {
             <div className="p-3" style={{ maxWidth: "900px" }}>
               <h4 className="text-white text-uppercase mb-md-3">Drive Your Dream Car</h4>
               <h1 className="display-1 text-white mb-md-4">Own It Today</h1>
-              <Link to="#" className="btn btn-primary py-md-3 px-md-5 mt-2">
+              <Link to="/garage" className="btn btn-primary py-md-3 px-md-5 mt-2">
                 Garage
               </Link>
             </div>
@@ -51,7 +51,7 @@ export default function Head() {
             <div className="p-3" style={{ maxWidth: "900px" }}>
               <h4 className="text-white text-uppercase mb-md-3">Luxury Rides</h4>
               <h1 className="display-1 text-white mb-md-4">Unbeatable Deals</h1>
-              <Link to="#" className="btn btn-primary py-md-3 px-md-5 mt-2">
+              <Link to="/garage" className="btn btn-primary py-md-3 px-md-5 mt-2">
                 Garage
               </Link>
             </div>
@@ -65,7 +65,7 @@ export default function Head() {
             <div className="p-3" style={{ maxWidth: "900px" }}>
               <h4 className="text-white text-uppercase mb-md-3">Ride In Style</h4>
               <h1 className="display-1 text-white mb-md-4">Buy With Confidence</h1>
-              <Link to="#" className="btn btn-primary py-md-3 px-md-5 mt-2">
+              <Link to="/garage" className="btn btn-primary py-md-3 px-md-5 mt-2">
                 Garage
               </Link>
             </div>

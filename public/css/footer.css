@@ -22,3 +22,15 @@
     font-size: 18px;
     color: white;
 }
+/* Mobile styles first */
+/* .container { */
+  /* padding: 1rem;
+}
+
+/* Larger screens */
+/* @media (min-width: 768px) {
+  .container {
+    display: flex;
+    padding: 2rem;
+  }
+/* } */ 

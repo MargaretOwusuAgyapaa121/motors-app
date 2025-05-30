@@ -17,24 +17,15 @@ const teamMembers = [
     role: "Manager",
     image: "/assets/AP luxury/manager.jpg",
     desc: " making car dreams interactive.",
-    linkedin: "#",
     twitter: "#",
     whatsApp: "#",
   },
-  {
-    name: "Cythia Carter",
-    role: "Secretary",
-    // image: "/assets/team/sophia.jpg",
-    desc: "Designs sleek interfaces that feel like driving a supercar.",
-    instagram: "#",
-    twitter: "#",
-    github: "#",
-  },
+  
 ];
 
 export default function Team() {
   return (
-    <section className="team-section">
+    <section className="team-section" class="container">
       <h2 className="section-title">Meet Our Team</h2>
       <div className="team-grid">
         {teamMembers.map((member, index) => (
@@ -46,7 +37,7 @@ export default function Team() {
             <div className="social-icons">
               <a href={member.instagram}><FaInstagram /></a>
               <a href={member.twitter}><FaTwitter /></a>
-              <a href={member.github}><FaWhatsapp /></a>
+              <a href={member.whatsApp}><FaWhatsapp /></a>
             </div>
           </div>
         ))}

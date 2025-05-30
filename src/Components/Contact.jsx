@@ -1,28 +1,20 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 
 const Contact = () => {
-  const form = useRef();
   const [isSending, setIsSending] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
+    setMessageSent(false);
 
-    emailjs
-      .sendForm("service_w3ggdnl", "template_s8mhtuf", form.current, {
-        publicKey: "FdtML6koZh6RJgqaC",
-      })
-      .then(() => {
-        alert("✅ Message sent!");
-        form.current.reset();
-        setIsSending(false);
-      })
-      .catch((error) => {
-        alert("❌ Message failed to send. Please try again.");
-        console.log("FAILED...", error.text);
-        setIsSending(false);
-      });
+    // Simulate sending...
+    setTimeout(() => {
+      setIsSending(false);
+      setMessageSent(true);
+      e.target.reset(); // Clear the form
+    }, 2000); // simulate a 2-second network delay
   };
 
   return (
@@ -70,7 +62,7 @@ const Contact = () => {
                 className="contact-form bg-light mb-4"
                 style={{ padding: "30px" }}
               >
-                <form ref={form} onSubmit={sendEmail}>
+                <form onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-6 form-group">
                       <input
@@ -118,6 +110,11 @@ const Contact = () => {
                       {isSending ? "Sending..." : "Send Message"}
                     </button>
                   </div>
+                  {messageSent && (
+                    <div className="alert alert-success mt-3">
+                      ✅ Message sent successfully!
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

@@ -1,147 +1,333 @@
-//
-import { Modal } from "bootstrap";
+// export default Garage;
 import React, { useState } from "react";
 
 const cars = [
   {
     id: 1,
-    image: "/assets/AP luxury/bugatti chiron.webp",
-    Modal:"BUGATTI CHIRON",
+    image: "/assets/AP luxury/cars/lambo-1.jpg",
+    Modal: "BUGATTI CHIRON",
     description: "Luxury meets power.",
+    details: {
+      images: [
+        "/assets/AP luxury/cars/lambo-1.jpg",
+        "/assets/AP luxury/cars/lambo2.jpg",
+        "/assets/AP luxury/cars/lambo3.jpg",
+        "/assets/AP luxury/cars/lambo4.jpg",
+      ],
+      specs: {
+        Engine: "8.0L W16",
+        TopSpeed: "261 mph",
+        Price: "$3 million",
+      },
+    },
+  },
+
+  {
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus",
+    description: "Refined for the road.",
+    details: {
+      images: [
+        "/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp",
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
     id: 2,
-    image: "/assets/AP luxury/mercedes-benz c-class.jpg",
-    Modal:"MERCEDES-BENZ C-CLASS",
-    description: "Drive into the future.",
+    image: "/assets/AP luxury/cars/dodge-Ib1.jpg",
+    Modal: "Dodge",
+    description: "Refined for the road.",
+    details: {
+      images: [
+        "/assets/AP luxury/cars/dodge-Ib1.jpg",
+        "/assets/AP luxury/cars/dodge-Ib2.jpg",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp",
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
+
   {
-    id: 3,
-    image: "/assets/AP luxury/Audi RS7.jpg",
-    Modal:"AUDI RS7",
-    description: "Bold and beautiful.",
-  },
-  {
-    id: 4,
-    image: "/assets/AP luxury/aud6.webp",
-    Modal:"AUD6",
-    description: "Performance in every curve.",
-  },
-  {
-    id: 5,
-    image: "/assets/AP luxury/dodge.jpg",
-    Modal:"DODGE",
-    description: "Elegance on four wheels.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
     id: 6,
-    image: "/assets/AP luxury/ferrari.avif",
-    Mdal:"FERRARI",
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
     description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 7,
-    image: "/assets/AP luxury/ford.jpg",
-    Modal:"FORD",
-    description: "Feel the luxury.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 8,
-    image: "/assets/AP luxury/jaguar.jpg",
-    Modal:"JAGUAR",
-    description: "Turn heads anywhere.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 9,
-    image: "/assets/AP luxury/aston martin.jpg",
-    Modal:"ASTON MARTIN",
-    description: "Crafted to thrill.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 10,
-    image: "/assets/AP luxury/chevrolet corvette.jpg",
-    Modal:"CORVETTE",
-    description: "Unleash the beast.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 11,
-    image: "/assets/AP luxury/nissan.jpg",
-    Modal:"NISSAN",
-    description: "Luxury reimagined.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 12,
-    image: "/assets/AP luxury/porshe.webp",
-    Modal:"PORSHE",
-    description: "Your dream ride.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 13,
-    image: "/assets/AP luxury/car13.jpg",
-    description: "Precision in motion.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 14,
-    image: "/assets/AP luxury/car14.jpg",
-    description: "Styled for greatness.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
   {
-    id: 15,
-    image: "/assets/AP luxury/car15.jpg",
-    description: "Own the moment.",
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
   },
+  {
+    id: 6,
+    image: "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+    Modal: "Lexus", 
+    description: "Refined for the road.",
+    details: {
+      images: ["/assets/AP luxury/cars/2015-lexus-rx350-3.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-1.webp",
+        "/assets/AP luxury/cars/2015-lexus-rx350-4.webp",
+        "assets/AP luxury/cars/2015-lexus-rx350-5.webp"
+      ],
+      specs: {
+        Engine: "6.5L V12",
+        TopSpeed: "211 mph",
+        Price: "$400,000",
+      },
+    },
+  },
+  
+  // ... Add similar details to other cars as needed
 ];
 
 const Garage = () => {
   const [fullscreenCar, setFullscreenCar] = useState(null);
   const [savedCars, setSavedCars] = useState([]);
+  const [selectedCar, setSelectedCar] = useState(null);
 
   const handleCardClick = (car) => {
     if (fullscreenCar?.id === car.id) {
-      setFullscreenCar(null); // Exit fullscreen
+      setFullscreenCar(null);
     } else {
-      setFullscreenCar(car); // Enter fullscreen
+      setFullscreenCar(car);
     }
   };
 
   const handleSave = (e, carId) => {
-    e.stopPropagation(); // Prevent fullscreen on button click
+    e.stopPropagation();
     if (!savedCars.includes(carId)) {
       setSavedCars([...savedCars, carId]);
     }
   };
 
-  const handleViewDetails = (e) => {
-    e.stopPropagation(); // Prevent fullscreen on button click
-    alert("View details coming soon!");
+  const handleViewDetails = (e, car) => {
+    e.stopPropagation();
+    setSelectedCar(car);
   };
 
   return (
     <>
-      <div className="garage-header">
+      <div className="garage-header" >
         <img
           src="/assets/AP luxury/img/car-rent-1.png"
           alt="img"
-          style={{
-            width: "100%",
-            height: "160%",
-            objectFit: "cover",
-          }}
+          style={{ width: "100%", height: "160%", objectFit: "cover" }}
         />
-
-        
         <div className="trans">
-        <h1 className="display-3 text-uppercase mb-3" id="text">
-          explore our garage{" "}
-        </h1>
+          <h1 className="display-3 text-uppercase mb-3" id="text">
+            explore our garage
+          </h1>
         </div>
-        
       </div>
 
       <div>
-      <h1 className="display-4 text-uppercase text-center mb-5" style={{margin:"240px"}}>
-                        Welcome To <span className="text-primary">our garage</span>
-                    </h1>
+        <h1
+          className="display-4 text-uppercase text-center mb-5"
+          style={{ margin: "240px" }}
+        >
+          Welcome To <span className="text-primary">our garage</span>
+        </h1>
       </div>
 
       <div className="garage-container">
@@ -184,7 +370,7 @@ const Garage = () => {
                     {savedCars.includes(car.id) ? "Saved" : "Save"}
                   </button>
                   <button
-                    onClick={(e) => handleViewDetails(e)}
+                    onClick={(e) => handleViewDetails(e, car)}
                     style={{
                       backgroundColor: "#28a745",
                       color: "white",
@@ -202,6 +388,85 @@ const Garage = () => {
           </div>
         )}
       </div>
+
+      {/* Car Details Modal */}
+      {selectedCar && (
+        <div
+          className="car-detail-modal"
+          onClick={() => setSelectedCar(null)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "rgba(0,0,0,0.7)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+          }}
+        >
+          <div
+            className="car-detail-content"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "white",
+              padding: "20px",
+              borderRadius: "12px",
+              maxWidth: "800px",
+              width: "90%",
+              maxHeight: "90vh",
+              overflowY: "auto",
+            }}
+          >
+            <h2>{selectedCar.Modal}</h2>
+            <p>{selectedCar.description}</p>
+            {selectedCar.details?.specs && (
+              <ul>
+                {Object.entries(selectedCar.details.specs).map(
+                  ([key, value]) => (
+                    <li key={key}>
+                      <strong>{key}:</strong> {value}
+                    </li>
+                  )
+                )}
+              </ul>
+            )}
+            <div
+              className="detail-images"
+              style={{ display: "flex", flexWrap: "wrap" }}
+            >
+              {(selectedCar.details?.images || []).map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt={`${selectedCar.Modal} detail ${i + 1}`}
+                  style={{
+                    maxWidth: "200px",
+                    margin: "10px",
+                    borderRadius: "8px",
+                  }}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => setSelectedCar(null)}
+              style={{
+                marginTop: "20px",
+                padding: "8px 16px",
+                backgroundColor: "#dc3545",
+                color: "white",
+                border: "none",
+                borderRadius: "6px",
+                cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

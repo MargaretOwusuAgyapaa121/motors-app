@@ -3,6 +3,13 @@
   background: #f7f7f7;
   text-align: center;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
 
 .section-title {
   font-size: 3rem;
@@ -56,5 +63,61 @@
 }
 
 .social-icons a:hover {
-  color: #0056b3;
+  color: #0056b3;}
+/* Base styles for mobile first */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        padding: 10px 15px !important;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(142, 219, 229, 0.1);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.page-header {
+    height: 400px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(28, 50, 36, 0.9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
+    background-attachment: fixed;
+}
+
+@media (max-width: 991.98px) {
+    .page-header {
+        height: 300px;
+    }
 }
